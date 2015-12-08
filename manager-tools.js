@@ -35,7 +35,7 @@ var pikePlace = {
     //create UL Element
     var ulEl = document.createElement('ul');
     //append textNode to UL element will display of the name of the store
-    ulEl.appendChild(document.createTextNode(this.name + ": "));
+    ulEl.appendChild(document.createTextNode(this.name + ": "))
     //assign the store_data element to a variable;
      var locations = document.getElementById("locations");
      //document.getElementById("")
@@ -127,5 +127,195 @@ var seatacAirport = {
   }
 
 }
+
+var southcenterMall = {
+  //all the properties of your object
+  name: "Southcenter Mall",
+  min: 11,
+  max: 38,
+  avgCookCust: 1.9,
+  totalCookie: 0,
+  cookiesHour: [],
+  randCustomer: function() {
+    //generate a random number based on min and max arguments passed in with this function is called.
+    return Math.floor(Math.random() * (this.max-this.min + 1)) + this.min;
+  },
+
+  generateHourly: function() {
+    //For each index in the hours array:
+      for (i = 0; i < hours.length; i++) {
+      //generate a random amount of cookies (avg * randomm num)
+       var hourlyCookie =  Math.floor(this.avgCookCust * this.randCustomer());
+      //push the value to the hourly cookies array
+      console.log(hourlyCookie);
+      this.cookiesHour.push(hourlyCookie);
+      //Add the value to the daily cookie total
+      this.totalCookie += hourlyCookie;
+      }
+  },
+
+  render: function() {
+    this.generateHourly();
+    //create UL Element
+    var ulEl = document.createElement('ul');
+    //append textNode to UL element will display of the name of the store
+    ulEl.appendChild(document.createTextNode(this.name + ": "))
+    //assign the store_data element to a variable;
+     var locations = document.getElementById("locations");
+     //document.getElementById("")
+    //append the Ul element to your html document
+      locations.appendChild(ulEl);
+
+    // For each index in the hours array:
+    for(i=0; i < hours.length; i++ ) {
+        // Create an LI element
+      var liEl = document.createElement('li');
+
+       // Assign the content of the hours array and hourly cookies to the LI; '10am: 125'
+       liEl.textContent = hours[i] + ": " + this.cookiesHour[i];
+       // Append the LI element to the UL element as a Child
+       ulEl.appendChild(liEl)
+  }
+
+
+       // Create an LI element
+       var liElement = document.createElement("li")
+
+       // Assign the content of your stores Daily Total to the LI element
+       liElement.textContent = "Total: " + this.totalCookie ;
+        // Append the LI element to the UL as a Child
+        ulEl.appendChild(liElement)
+
+  }
+
+}
+
+var bellevueSquare = {
+  //all the properties of your object
+  name: "Bellevue Square",
+  min: 20,
+  max: 48,
+  avgCookCust: 3.3,
+  totalCookie: 0,
+  cookiesHour: [],
+  randCustomer: function() {
+    //generate a random number based on min and max arguments passed in with this function is called.
+    return Math.floor(Math.random() * (this.max-this.min + 1)) + this.min;
+  },
+
+  generateHourly: function() {
+    //For each index in the hours array:
+      for (i = 0; i < hours.length; i++) {
+      //generate a random amount of cookies (avg * randomm num)
+       var hourlyCookie =  Math.floor(this.avgCookCust * this.randCustomer());
+      //push the value to the hourly cookies array
+      console.log(hourlyCookie);
+      this.cookiesHour.push(hourlyCookie);
+      //Add the value to the daily cookie total
+      this.totalCookie += hourlyCookie;
+      }
+  },
+
+  render: function() {
+    this.generateHourly();
+    //create UL Element
+    var ulEl = document.createElement('ul');
+    //append textNode to UL element will display of the name of the store
+    ulEl.appendChild(document.createTextNode(this.name + ": "))
+    //assign the store_data element to a variable;
+     var locations = document.getElementById("locations");
+     //document.getElementById("")
+    //append the Ul element to your html document
+      locations.appendChild(ulEl);
+
+    // For each index in the hours array:
+    for(i=0; i < hours.length; i++ ) {
+        // Create an LI element
+      var liEl = document.createElement('li');
+
+       // Assign the content of the hours array and hourly cookies to the LI; '10am: 125'
+       liEl.textContent = hours[i] + ": " + this.cookiesHour[i];
+       // Append the LI element to the UL element as a Child
+       ulEl.appendChild(liEl)
+  }
+
+
+       // Create an LI element
+       var liElement = document.createElement("li")
+
+       // Assign the content of your stores Daily Total to the LI element
+       liElement.textContent = "Total: " + this.totalCookie ;
+        // Append the LI element to the UL as a Child
+        ulEl.appendChild(liElement)
+
+  }
+
+}
+var alki = {
+  //all the properties of your object
+  name: "Alki",
+  min: 3,
+  max: 24,
+  avgCookCust: 2.6,
+  totalCookie: 0,
+  cookiesHour: [],
+  randCustomer: function() {
+    //generate a random number based on min and max arguments passed in with this function is called.
+    return Math.floor(Math.random() * (this.max-this.min + 1)) + this.min;
+  },
+
+  generateHourly: function() {
+    //For each index in the hours array:
+      for (i = 0; i < hours.length; i++) {
+      //generate a random amount of cookies (avg * randomm num)
+       var hourlyCookie =  Math.floor(this.avgCookCust * this.randCustomer());
+      //push the value to the hourly cookies array
+      console.log(hourlyCookie);
+      this.cookiesHour.push(hourlyCookie);
+      //Add the value to the daily cookie total
+      this.totalCookie += hourlyCookie;
+      }
+  },
+
+  render: function() {
+    this.generateHourly();
+    //create UL Element
+    var ulEl = document.createElement('ul');
+    //append textNode to UL element will display of the name of the store
+    ulEl.appendChild(document.createTextNode(this.name + ": "))
+    //assign the store_data element to a variable;
+     var locations = document.getElementById("locations");
+     //document.getElementById("")
+    //append the Ul element to your html document
+      locations.appendChild(ulEl);
+
+    // For each index in the hours array:
+    for(i=0; i < hours.length; i++ ) {
+        // Create an LI element
+      var liEl = document.createElement('li');
+
+       // Assign the content of the hours array and hourly cookies to the LI; '10am: 125'
+       liEl.textContent = hours[i] + ": " + this.cookiesHour[i];
+       // Append the LI element to the UL element as a Child
+       ulEl.appendChild(liEl)
+  }
+
+
+       // Create an LI element
+       var liElement = document.createElement("li")
+
+       // Assign the content of your stores Daily Total to the LI element
+       liElement.textContent = "Total: " + this.totalCookie ;
+        // Append the LI element to the UL as a Child
+        ulEl.appendChild(liElement)
+
+  }
+
+}
+
+
 pikePlace.render();
 seatacAirport.render();
+southcenterMall.render();
+bellevueSquare.render();
+alki.render();
