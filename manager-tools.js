@@ -21,7 +21,6 @@ function CookieShop(locationName, minCust, maxCust, avgCust) {
 }
 // Ex pikePlace min: 17, max 88, avg:5.2, total:0, hrlycookie: []
 // trish you can add at the top of this in your CookieShop constructor. since its not being passed in and changed. It can be hard coded.  hourlyCookie = 0;
-// function CookieShop (locName, minCust, maxCust, AvgCookieCust) example.
 //this.hourlyCookie = [];
 //this.dailyCookie = 0;
 
@@ -75,10 +74,17 @@ var southCenterMall = new CookieShop("South Center Mall", 3 , 24, 2.6);
 function firstLine() {
   var hoursElem = document.getElementById("hours")
   var tblElem = document.createElement("table");
-  var thElem = document.createElement("th")
+  var thElem = document.createElement("th");
   thElem.textContent = "Locations";
   tblElem.appendChild(thElem);
-  hoursElem.appendChild(tblElem)
+  //hoursElem.appendChild(tblElem);
+
+  for(var i = 0; i < hours.length; i ++) {
+    var thElem = document.createElement("th")
+    thElem.textContent = hours[i];
+    tblElem.appendChild(thElem);
+    hoursElem.appendChild(tblElem);
+  }
 }
 
 
