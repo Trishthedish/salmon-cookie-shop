@@ -16,21 +16,22 @@ function CookieShop(locationName, minCust, maxCust, avgCust) {
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCust = avgCust;
-  this.hourlyCookie = [];
-  this.dailyCookie = 0;
+  this.hourlyCookies = [];
+  this.dailyCookies = 0;
 }
 // Ex pikePlace min: 17, max 88, avg:5.2, total:0, hrlycookie: []
 // trish you can add at the top of this in your CookieShop constructor. since its not being passed in and changed. It can be hard coded.  hourlyCookie = 0;
-// function CookieShop (locName, minCust, maxCust, AvgCookieCust)
+// function CookieShop (locName, minCust, maxCust, AvgCookieCust) example.
 //this.hourlyCookie = [];
 //this.dailyCookie = 0;
 
-//customerRand keep and change randCustomer.
 
 CookieShop.prototype.randCustomer = function (min, max) {
   //generate a random number based on min and max arguments passed in
   return Math.floor(Math.random() *(max - min + 1)) + min;
+
 }
+
 
 CookieShop.prototype.generateHourly = function() {
     //For each index in the hours array:
@@ -44,11 +45,11 @@ CookieShop.prototype.generateHourly = function() {
 
 CookieShop.prototype.render = function() {
   this.generateHourly();
-    var hoursElem = document.getElementById("hours");
+    var hoursElem = document.getElementById("hours");  // ref html
     var tblElem = document.createElement("table");
     var tdElem = document.createElement("td");
     tdElem.textContent = this.locationName;
-    tblElm.appendChild(tdElem);
+    tblElem.appendChild(tdElem);
     tdElem.className = "firstRow";
 
     var totElem = document.createElement('td');
@@ -72,18 +73,18 @@ var southCenterMall = new CookieShop("South Center Mall", 3 , 24, 2.6);
 ///
 
 function firstLine() {
-  var hoursElem = document.getElementById("hours")//ref dom
+  var hoursElem = document.getElementById("hours")
   var tblElem = document.createElement("table");
   var thElem = document.createElement("th")
-  thElem.textContent = "Locations";  //hours?
+  thElem.textContent = "Locations";
   tblElem.appendChild(thElem);
-  thElem.appendChild(tblElem)
+  hoursElem.appendChild(tblElem)
 }
 
 
 firstLine();
 pikePlace.render();
 seaTac.render();
-southCenter.render();
+southCenterMall.render();
 bellevueSquare.render();
 alki.render();
