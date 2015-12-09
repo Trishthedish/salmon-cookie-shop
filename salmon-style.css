@@ -1,8 +1,29 @@
 #pub {
-  filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  filter:grayscale(100%);
+  opacity: 0.5;
+
 }
 
 body {
-  background color: black;
+  background-color: black;
   color: white;
+}
+
+p {
+  color: green;
+  visited: yellow;
+}
+
+#titleMid {
+  align: center;
+  @import: url(https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow);
+}
+
+#logo {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
