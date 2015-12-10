@@ -2,12 +2,12 @@
   -webkit-filter: grayscale(100%);
   filter:grayscale(100%);
   opacity: 0.5;
-
 }
 
 body {
   background-color: black;
   color: white;
+
 }
 
 p {
@@ -15,10 +15,6 @@ p {
   visited: yellow;
 }
 
-#titleMid {
-  align: center;
-  @import: url(https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow);
-}
 
 #logo {
   height: 10em;
@@ -38,6 +34,17 @@ p {
 
 td, th {
   border: 1px solid #999;
-  padding: 0.5rem;
-  text-align: left;
+  width: 5em;
+  text-align: center;
+}
+
+td:first-child, th:first-child {
+  padding: 0.9rem;
+  text-align: center;
+  width: 10em;
+}
+
+#user-form {
+  color: green;
+  font-size: 18px;
 }

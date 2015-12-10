@@ -12,15 +12,29 @@
           <a href="manager-tools.html">Manager Tools</a>
         <p>
       </nav>
+      <img id="logo" src="Drawing.png">
       <h1>Tools for Seattle Salmon Cookie Managers</h1>
       <p>A place to find all sorts of relevant information needed for a succesful franchise.</p>
-      <form id="">
-       <input type="text" name="locationName">
-       <input type="password" name="password">
-       <input type="button" name="submit" value="add">
-     </form>
+    
+      <form id="user-form">
+        <fieldset>
+          <legend></legend>
+            <label for="addLocName">Location Name</label>
+            <input id="locationName" type="text" placeholder="Location Name">
 
-      <section id="hours"></section>
+            <label for="addMinCust">Minimum Customers</label>
+            <input id="minCustomer" type="text" placeholder="Minimum Customer">
+
+            <label for="addMaxCust">Maximum Customers</label>
+            <input id="maxCustomer" type="text" placeholder="Max Customer">
+
+            <input id="user-submit" type="submit" value="add">
+
+        </fieldset>
+    </form>
+
+
+        <section id="hours"></section>
       <script src="manager-tools.js"></script>
   </body>
 </html>
