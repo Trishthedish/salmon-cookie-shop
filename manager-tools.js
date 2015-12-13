@@ -97,3 +97,117 @@ seaTac.render();
 southCenterMall.render();
 bellevueSquare.render();
 alki.render();
+//
+// $('#user-form').click( function(event) {
+//   event.preventDefault();
+//   //grab the info from the inputs,(locName etc)
+//     var locNam = $("locName").value();
+
+
+$('user-form').on( 'click', function() {
+  var a = $("input.locNam").val();
+  console.log(a)
+});
+
+    //
+    // $("minCust").
+    //
+    //
+    // $("maxCust").
+
+  // make instant of the custructor function using that information
+
+  // tell it to append the new info to the table.
+
+
+//   //
+// }
+// );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   //1. selelct the element node(s) you want the script to respond to.
+// var userForm = document.getElementById("user-form");
+//
+//  //2. indicate which event on the selected node(s) will trigger the response. Binding an event. SPECIFY event. userForm.addEventListener("submit", function(event){
+//   //   event.preventDefault();
+//   //   var eventUserForm = event.target.????.value;
+//   // });
+//
+// //declare function
+// // function inputCheck() {
+// //   //create variable
+// //   var textInput;
+// //   // get user-form input
+// //   textInput = document.getElementById('user-form');
+// //   // give username focus
+// //   textInput.addEventListener("submit", function(event){
+// //     checkInputs();
+// //     event.preventDefault();
+// //   }, false);
+// // }
+//
+// function checkInputs() {
+//   var resultDiv = document.getElementById("result");
+//         resultDiv.hidden = true;
+//   var inputs = document.getElementsByTagName('textInput');
+//
+//   while(result.hasChildren()) {
+//     resultDiv.removeChild(resultDiv.firstChild);
+//   }
+// for (var i = 0; i < textInput.length; i ++) {
+//   textInput[i].classList.add("interacted");
+//   if(!textInput[i].validity.valid) {
+//     var para = document.createElement("p");
+//     var formatedName = reformName(inputs[i].id);
+//     var msg = document.createTextNode(formatedName + "is invalid");
+//           para.appendChild(msg);
+//           resultDiv.appendChild(para);
+//           resultDiv.hidden = false;
+//         }
+//      }
+// }
+//
+// function reformatName(oldName) {
+//   switch(oldName){
+//         case "locName": return "Loction Name";
+//         break;
+//         case "minCust": return "Minimum Customers";
+//         break;
+//         case "maxCust": return "Maximum Customers";
+//         break;
+//   }
+// }
+//
+// document.addEventListener("DomContentLoaded", checkInputs, false);
+//
+//  // 3. Call code.
+// //     //when page loaded call setup()
+// // window.addEventListener('load', setup, false);
+//
+//
+//  // function checkUserSubmit() {
+//  //   var  = document.getElementById("user-form");
+//  //
+//  //
+//  // }
+//  //
+//  // //3. call code.
