@@ -97,6 +97,50 @@ seaTac.render();
 southCenterMall.render();
 bellevueSquare.render();
 alki.render();
+
+
+var userForm = document.getElementById("user-form");
+userForm.addEventListener('submit', turdFergeson);
+//hf event handler  ///name of event function
+
+function turdFergeson(event) {
+  event.preventDefault();
+  console.log(event);
+  var locName = event.target.locName.value;
+  var minCust = parseInt(event.target.minCust.value);
+  var maxCust = parseInt(event.target.maxCust.value);
+  var avgCust = parseFloat(event.target.avgCust.value);
+
+  var newLocation = new CookieShop(locName,minCust, maxCust, avgCust);
+  newLocation.render();
+
+  console.log(newLocation);
+}
+
+var logo = document.getElementById("logo");
+logo.addEventListener('click', logoClick);
+
+var table = document.getElementById("hours");
+table.addEventListener('click', tableClick);
+
+var logoClicks = 0;
+var tableClicks = 0;
+
+function logoClick(event) {
+  logoClicks += 1;
+   console.log("You have clicked on " + logo.src + " " + logoClicks + " times ");
+}
+//src is important in line 131
+
+function tableClick(event) {
+  tableClicks += 1;
+  console.log("You have clicked on the table " + tableClicks + " times ");
+}
+
+// var southCenterMall = new CookieShop("South Center Mall", 3 , 24, 2.6);
+
+
+
 //
 // $('#user-form').click( function(event) {
 //   event.preventDefault();
@@ -104,10 +148,10 @@ alki.render();
 //     var locNam = $("locName").value();
 
 
-$('user-form').on( 'click', function() {
-  var a = $("input.locNam").val();
-  console.log(a)
-});
+// $('user-form').on( 'click', function() {
+//   var a = $("input.locNam").val();
+//   console.log(a)
+// });
 
     //
     // $("minCust").
