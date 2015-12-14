@@ -1,13 +1,34 @@
-#pub {
+
+/*This is where I'll size all pictures*/
+#pub, #family, #food {
+  height: 600px;
+  width: 760px;
   -webkit-filter: grayscale(100%);
   filter:grayscale(100%);
-  opacity: 0.5;
-
+  opacity: 0.8;
 }
+#wrap{
+	position:fixed;;
+	z-index:-1;
+	top:0;
+	left:0;
+	background-color:black
+}
+
+#wrap img.fade {
+  position:absolute;
+	top:0;
+	display:none;
+	width:100%;
+	height:100%;
+	z-index:-1
+}
+
 
 body {
   background-color: black;
   color: white;
+
 }
 
 p {
@@ -15,10 +36,6 @@ p {
   visited: yellow;
 }
 
-#titleMid {
-  align: center;
-  @import: url(https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow);
-}
 
 #logo {
   height: 10em;
@@ -38,6 +55,17 @@ p {
 
 td, th {
   border: 1px solid #999;
-  padding: 0.5rem;
-  text-align: left;
+  width: 5em;
+  text-align: center;
+}
+
+td:first-child, th:first-child {
+  padding: 0.9rem;
+  text-align: center;
+  width: 10em;
+}
+
+#user-form {
+  color: green;
+  font-size: 18px;
 }

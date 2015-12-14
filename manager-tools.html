@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="salmon-style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <title>Salmon Cookie Shop</title>
   </head>
   <body>
@@ -12,15 +13,28 @@
           <a href="manager-tools.html">Manager Tools</a>
         <p>
       </nav>
+      <img id="logo" src="Drawing.png">
       <h1>Tools for Seattle Salmon Cookie Managers</h1>
       <p>A place to find all sorts of relevant information needed for a succesful franchise.</p>
-      <form id="">
-       <input type="text" name="locationName">
-       <input type="password" name="password">
-       <input type="button" name="submit" value="add">
-     </form>
 
-      <section id="hours"></section>
+      <form id="user-form">
+        <fieldset>
+          <legend>//Insert Clever Text here. Or leave blank?</legend>
+            <label for="locName">Location Name</label>
+            <input id="locName" type="text" placeholder="Location Name">
+
+            <label for="minCust">Minimum Customers</label>
+            <input id="minCust" type="text" placeholder="Minimum Customer">
+
+            <label for="maxCust">Maximum Customers</label>
+            <input id="maxCust" type="text" placeholder="Max Customer">
+
+            <input id="user-submit" type="submit" value="add">
+      </fieldset>
+    </form>
+
+
+        <section id="hours"></section>
       <script src="manager-tools.js"></script>
   </body>
 </html>
