@@ -1,5 +1,6 @@
-
+/*This is the code that would or should work with JS not necesary if doing vanilla*/
 /*This is where I'll size all pictures*/
+
 #pub, #family, #food {
   height: 600px;
   width: 760px;
@@ -24,16 +25,39 @@
 	z-index:-1
 }
 
+#family {
+  height: 600px;
+  width: 800px;
+  -webkit-filter: grayscale(100%);
+  filter:grayscale(100%);
+  opacity: 0.8;
+}
+
+#navTop {
+  align-items: center;
+  text-size: 30px;
+}
+
+#header {
+  color: #eae7e7;
+}
+
 
 body {
   background-color: black;
   color: white;
+  font-family: sans-serif;
+
 
 }
 
 p {
   color: green;
   visited: yellow;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 20px;
+
 }
 
 
